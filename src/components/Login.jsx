@@ -4,7 +4,7 @@ import {useMutation} from 'react-query'
 import {useNavigate} from 'react-router-dom'
 import {Form,FormGroup,Input,Label,FormFeedback,Button} from "reactstrap"
 
-export const Login=()=> {
+export const Login=({setLoggedInUser})=> {
     const [username,setUsername]=useState('')
     const [password,setPassword]=useState('')
     const [isValidU,setIsValidU]=useState(null)
