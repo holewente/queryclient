@@ -52,9 +52,10 @@ import {
           {loggedInUser ? (
             <Nav navbar>
                 <NavItem className="btn nav-link d-flex flex-column align-items-center">
+                  <NavLink to="userProfile" className="nav-link">
                   <img src="user.png" alt="avatar" style={{width:"20px"}}/>
                   {loggedInUser}
-                    
+                    </NavLink>
                 </NavItem>
                 <NavItem className='d-flex align-items-end'>
                   <span onClick={()=>setLoggedInUser}>Logout</span>

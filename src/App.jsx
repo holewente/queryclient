@@ -11,6 +11,7 @@ import { MyNavbar } from './components/MyNavbar';
 import {Product} from './components/Product'
 import { Login } from './components/Login';
 import { Register } from './components/Register';
+import { UserProfile } from './components/UserProfile';
 import {QueryClient,QueryClientProvider} from 'react-query'
 
 const queryClient = new QueryClient()
@@ -32,6 +33,8 @@ function App() {
       <Route path='products/:id' element={<Product/>} />
       <Route path='login' element={<Login setLoggedInUser={setLoggedInUser}/>} />
       <Route path='register' element={<Register/>} />
+     {loggedInUser && <Route path='userProfile' element={<UserProfile/>} />}
+
       </Routes>
     </div>
     </QueryClientProvider>
